@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem "rails", "~> 4.2.0.rc1"
 gem "devise"
 gem "rdoc"
 
