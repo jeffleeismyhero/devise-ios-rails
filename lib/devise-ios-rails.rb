@@ -1,6 +1,9 @@
 require 'rails'
 
 module DeviseIosRails
+  class Engine < ::Rails::Engine
+  end
+
   module Rails
     class Railtie < ::Rails::Railtie
       config.before_initialize do
