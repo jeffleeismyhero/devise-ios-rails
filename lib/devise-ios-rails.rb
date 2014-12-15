@@ -1,4 +1,5 @@
 require 'rails'
+require 'devise-ios-rails/rails/routes'
 
 module DeviseIosRails
   class Engine < ::Rails::Engine
