@@ -7,7 +7,7 @@ module DeviseIosRails
 
   module Rails
     class Railtie < ::Rails::Railtie
-      config.before_initialize do
+      config.after_initialize do
         DeviseController.class_eval do
           unacceptable_forgery_methods = [
             ActionController::RequestForgeryProtection::ProtectionMethods::Exception,
@@ -23,6 +23,7 @@ module DeviseIosRails
             self.mimes_for_respond_to = new.freeze
           end
         end
+
         ActionController::Responder.class_eval do
           protected
 
@@ -40,6 +41,12 @@ module DeviseIosRails
             else
               head :no_content
             end
+          end
+        end
+
+        SimpleTokenAuthentication::FallbackAuthenticationHandler.class_eval do
+          def authenticate_entity!(controller, entity)
+            controller.send("authenticate_#{entity.name_underscore}!".to_sym, force: true)
           end
         end
       end
