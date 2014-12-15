@@ -23,6 +23,14 @@ module DeviseIosRails
             self.mimes_for_respond_to = new.freeze
           end
         end
+        ActionController::Responder.class_eval do
+          protected
+
+          def json_resource_errors
+            resource.errors
+          end
+
+        end
       end
     end
   end
