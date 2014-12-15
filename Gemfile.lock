@@ -1,9 +1,11 @@
 PATH
   remote: .
   specs:
-    devise-ios-rails (0.0.1)
+    devise-ios-rails (0.0.11)
+      active_model_serializers
       devise
       rails (~> 4.1.8)
+      simple_token_authentication
 
 GEM
   remote: https://rubygems.org/
@@ -21,6 +23,8 @@ GEM
       activesupport (= 4.1.8)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_model_serializers (0.9.1)
+      activemodel (>= 3.2)
     activemodel (4.1.8)
       activesupport (= 4.1.8)
       builder (~> 3.1)
@@ -100,6 +104,10 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    simple_token_authentication (1.7.0)
+      actionmailer (>= 3.2.6, < 5)
+      actionpack (>= 3.2.6, < 5)
+      devise (~> 3.2)
     spring (1.2.0)
     spring-commands-rspec (1.0.2)
       spring (>= 0.9.1)
