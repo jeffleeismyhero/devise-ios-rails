@@ -1,0 +1,5 @@
+deployment:
+  master:
+    branch: master
+    commands:
+      - curl -L https://raw.githubusercontent.com/netguru/review/master/check.rb | ruby
