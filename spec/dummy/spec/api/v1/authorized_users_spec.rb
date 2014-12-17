@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'authorized users endpoint' do
   include Rack::Test::Methods
-  before { current_session.header('Accept', 'application/json') }
+  include_context 'format: json'
 
   describe "Update User" do
     before { build(:authentication, user: user).set_headers(current_session) }

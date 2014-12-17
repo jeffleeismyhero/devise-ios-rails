@@ -1,6 +1,6 @@
 describe 'login to application endpoint' do
   include Rack::Test::Methods
-  before { current_session.header('Accept', 'application/json') }
+  include_context 'format: json'
 
   describe "login a user" do
     let(:url) { 'v1/users/sign_in' }

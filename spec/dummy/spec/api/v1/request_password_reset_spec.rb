@@ -1,6 +1,6 @@
 describe 'reset your password endpoint' do
   include Rack::Test::Methods
-  before { current_session.header('Accept', 'application/json') }
+  include_context 'format: json'
 
   describe "request a password reset" do
     let(:url) { 'v1/users/password' }
