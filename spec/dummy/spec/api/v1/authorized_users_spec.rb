@@ -4,7 +4,7 @@ describe 'authorized users endpoint' do
   include_context 'format: json'
 
   describe "Update User" do
-    before { build(:authentication, user: user).set_headers(current_session) }
+    include_context 'authenticated'
 
     let(:url) { "v1/users" }
     let(:user) { create(:user) }
@@ -52,7 +52,7 @@ describe 'authorized users endpoint' do
   end
 
   describe "Delete Own Account" do
-    before { build(:authentication, user: user).set_headers(current_session) }
+    include_context 'authenticated'
 
     let(:url) { "v1/users" }
     let(:user) { create(:user) }
@@ -81,7 +81,7 @@ describe 'authorized users endpoint' do
   end
 
   describe "Change User password" do
-    before { build(:authentication, user: user).set_headers(current_session) }
+    include_context 'authenticated'
 
     let(:url) { "v1/users/password" }
     let(:user) { create(:user) }
