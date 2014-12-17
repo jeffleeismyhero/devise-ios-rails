@@ -9,9 +9,9 @@ shared_examples "needs authorization" do
   end
 
   context "with invalid authentication" do
-    before { build(:authentication, user: user).set_headers(current_session) }
+    before { build(:authentication, user: not_existing_user).set_headers(current_session) }
 
-    let(:user) { build(:user) }
+    let(:not_existing_user) { build(:user) }
 
     it_behaves_like "an unauthorized JSON request"
   end
