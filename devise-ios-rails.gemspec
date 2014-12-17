@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.1.8"
   s.add_dependency "devise"
   s.add_dependency "simple_token_authentication"
-  s.add_dependency "active_model_serializers"
+  s.add_dependency "active_model_serializers", "0.9.0"
 end
