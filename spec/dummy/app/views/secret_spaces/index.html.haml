@@ -1,0 +1,19 @@
+%h1 Listing secret_spaces
+
+%table
+  %tr
+    %th Text
+    %th
+    %th
+    %th
+
+  - @secret_spaces.each do |secret_space|
+    %tr
+      %td= secret_space.text
+      %td= link_to 'Show', secret_space
+      %td= link_to 'Edit', edit_secret_space_path(secret_space)
+      %td= link_to 'Destroy', secret_space, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Secret space', new_secret_space_path

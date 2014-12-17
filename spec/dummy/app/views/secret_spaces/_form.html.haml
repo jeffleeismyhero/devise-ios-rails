@@ -1,0 +1,13 @@
+= form_for @secret_space do |f|
+  - if @secret_space.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@secret_space.errors.count, "error")} prohibited this secret_space from being saved:"
+      %ul
+        - @secret_space.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @secret_space.text
+
+= link_to 'Edit', edit_secret_space_path(@secret_space)
+\|
+= link_to 'Back', secret_spaces_path

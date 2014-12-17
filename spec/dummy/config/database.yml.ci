@@ -1,0 +1,9 @@
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: devise_ios_rails_test
+  pool:     5
+  username: devise_ios_rails
+  password:
+  template: template0
