@@ -6,7 +6,7 @@ describe 'endpoints for unauthorized users' do
     let(:url) { 'v1/users' }
     let(:user) { build(:user) }
 
-    subject { post url, params, format: :json }
+    subject { post url, params }
 
     context "with valid params" do
       let(:params) do
