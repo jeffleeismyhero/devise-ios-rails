@@ -1,10 +1,9 @@
 require 'rails'
+require 'devise-ios-rails/engine'
 require 'devise-ios-rails/rails/routes'
+require 'simple_token_authentication'
 
 module DeviseIosRails
-  class Engine < ::Rails::Engine
-  end
-
   module Rails
     class Railtie < ::Rails::Railtie
       config.after_initialize do
