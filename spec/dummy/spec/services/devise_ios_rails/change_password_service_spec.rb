@@ -1,4 +1,4 @@
-module V1
+module DeviseIosRails
   describe ChangePasswordService do
     let(:user) { create(:user) }
     let(:params) do
@@ -41,10 +41,6 @@ module V1
     context "with invalid attributes" do
       let(:params)  do
         { password_confirmation: 'not_matching', password: 'fresh'}
-      end
-
-      it "raises validation exception" do
-        expect{ subject }.to raise_error(ActiveRecord::RecordInvalid)
       end
     end
   end
