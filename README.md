@@ -21,7 +21,7 @@ Setup
 
 With a working devise environment, the only thing you need to do is:
 
-- add gem to the Gemfile `gem 'devise-ios-rails'`
+- add gem to the Gemfile `gem 'devise-ios-rails', github: 'netguru/devise-ios-rails'`
 - run bundler to install the gem `bundle install`
 - setup devise like you would normally do ([check the installation guide][devise])
 - in your routes change `devise_for ModelName` with `devise_ios_rails_for ModelName` (ModelName is usually User)
