@@ -73,7 +73,7 @@ Here's a few guidelines to follow:
 - you can use [rubocop][rubocop] which can be easily integrated with popular editors. ([our rubocop config][rubocop_config])
 - write tests
 - make sure the entire test suite passes
-- make sure rubocop passes, our config
+- make sure rubocop passes our config
 - open a pull request on GitHub
 - [squash your commits][squash_commits] after receiving feedback
 
