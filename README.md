@@ -3,7 +3,7 @@ Devise iOS Rails Backend
 
 Gem that updates devise to work with external clients. Specially created to work with [devise for iOS][ios_devise].
 
-It currently implements authentication only with "simple token authentication".
+It currently implements authentication only with a "simple token authentication".
 
 Requirements
 ============
@@ -25,7 +25,7 @@ With a working devise environment, the only thing you need to do is:
 - run bundler to install the gem `bundle install`
 - setup devise like you would normally do ([check the installation guide][devise])
 - in your routes change `devise_for ModelName` with `devise_ios_rails_for ModelName` (ModelName is usually User)
-- Authentication is handled by user token which is generated for each user during registration. To protect actions to only registered users, add `acts_as_token_authentication_handler_for User` in your controller:
+- authentication is handled by user token which is generated for each user during the registration process. To protect actions to only registered users, add `acts_as_token_authentication_handler_for User` in your controller:
 
 ```ruby
 class SecretSpacesController < ApplicationController
@@ -33,7 +33,7 @@ class SecretSpacesController < ApplicationController
 end
 ```
 
-- If you want to skip authentication on some actions add `skip_before_filter :authenticate_user_from_token!, only: [:action]` in your controller
+- If you want to skip authentication for some actions add `skip_before_filter :authenticate_user_from_token!, only: [:action]` in your controller
 
 ```ruby
 class SecretSpacesController < ApplicationController
@@ -67,7 +67,7 @@ Contribution
 
 First, thank you for contributing!
 
-Here a few guidelines to follow:
+Here's a few guidelines to follow:
 
 - we follow [Ruby Style Guide][ruby_style_guides].
 - you can use [rubocop][rubocop] which can be easily integrated with popular editors. ([our rubocop config][rubocop_config])
