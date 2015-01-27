@@ -31,10 +31,10 @@ To make it work you need to run migration that adds `authentication_token` colum
 If your ModelName is `User`, than the migration should look like this:
 ```ruby
 class AddUniqueTokenToUser < ActiveRecord::Migration
- def change
-   add_column :users, :authentication_token, :string
-   add_index :users, :authentication_token, unique: true
- end
+  def change
+    add_column :users, :authentication_token, :string
+    add_index :users, :authentication_token, unique: true
+  end
 end
 ```
 Dont forget about `rake db:migrate`.
