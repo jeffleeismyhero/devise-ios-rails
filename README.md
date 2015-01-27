@@ -25,7 +25,21 @@ With a working devise environment, the only thing you need to do is:
 - run bundler to install the gem `bundle install`
 - setup devise like you would normally do ([check the installation guide][devise])
 - in your routes change `devise_for ModelName` with `devise_ios_rails_for ModelName` (ModelName is usually User)
-- authentication is handled by user token which is generated for each user during the registration process. To protect actions to only registered users, add `acts_as_token_authentication_handler_for User` in your controller:
+- authentication is handled by user token which is generated for each user during the registration process. 
+
+To make it work you need to run migration that adds `authentication_token` column to your Devise model.
+If your ModelName is `User`, than the migration should look like this:
+```ruby
+class AddUniqueTokenToUser < ActiveRecord::Migration
+ def change
+   add_column :users, :authentication_token, :string
+   add_index :users, :authentication_token, unique: true
+ end
+end
+```
+Dont forget about `rake db:migrate`.
+
+-To protect actions to only registered users, add `acts_as_token_authentication_handler_for User` in your controller:
 
 ```ruby
 class SecretSpacesController < ApplicationController
