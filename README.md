@@ -93,7 +93,7 @@ Here's a few guidelines to follow:
 
 Copyright  2014 © [Netguru][netguru_url], released under the New BSD License
 
-[ios_devise]: https://github.com/netguru/ios-devise
+[ios_devise]: https://github.com/netguru/devise-ios
 
 [ruby]: https://www.ruby-lang.org
 [rails]: http://www.rubyonrails.org
