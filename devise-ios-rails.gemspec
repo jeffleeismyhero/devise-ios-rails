@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 4.1.8"
-  s.add_dependency "devise"
-  s.add_dependency "simple_token_authentication"
-  s.add_dependency "active_model_serializers", "0.9.0"
+  s.add_dependency "rails", "~> 4.1"
+  s.add_dependency "devise", "~> 3.4"
+  s.add_dependency "simple_token_authentication", "~> 1.7"
+  s.add_dependency "active_model_serializers", "~> 0.9"
 end
