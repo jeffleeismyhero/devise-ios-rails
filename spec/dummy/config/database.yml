@@ -1,7 +1,7 @@
 heroku:
   adapter:  sqlite3
   host:     localhost
-  database: db/saaskit_development.sqlite3
+  database: db/saaskit_heroku.sqlite3
   pool:     5
   username: saaskit
 
@@ -12,32 +12,9 @@ development:
   pool:     5
   username: saaskit
 
-staging:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
-  database: saaskit_development
-  pool:     5
-  username: saaskit
-  password: saaskit
-  template: template0
-
 test:
-  adapter:  postgresql
+  adapter:  sqlite3
   host:     localhost
-  encoding: unicode
-  database: saaskit_test
+  database: db/saaskit_test.sqlite3
   pool:     5
   username: saaskit
-  password: saaskit
-  template: template0
-
-production:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
-  database: saaskit_production
-  pool:     5
-  username: saaskit
-  password: saaskit
-  template: template0
