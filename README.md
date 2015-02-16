@@ -91,6 +91,8 @@ Here's a few guidelines to follow:
 - open a pull request on GitHub
 - [squash your commits][squash_commits] after receiving feedback
 
+You can also read our blog post [announcing devise-iOS for simplified auth](https://netguru.co/blog/open-source-announcing-devise-ios).
+
 Copyright  2014 © [Netguru][netguru_url], released under the New BSD License
 
 [ios_devise]: https://github.com/netguru/devise-ios
