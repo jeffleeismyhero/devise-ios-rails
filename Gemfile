@@ -4,7 +4,7 @@ gemspec
 gem 'rails'
 gem 'devise'
 gem 'simple_token_authentication'
-gem 'active_model_serializers', '0.9.0'
+gem 'active_model_serializers'
 
 gem "dotenv-deployment"
 gem "pry"
