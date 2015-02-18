@@ -21,7 +21,7 @@ Setup
 
 With a working devise environment, the only thing you need to do is:
 
-- add gem to the Gemfile `gem 'devise-ios-rails', github: 'netguru/devise-ios-rails'`
+- add gem to the Gemfile `gem 'devise-ios-rails'`
 - run bundler to install the gem `bundle install`
 - setup devise like you would normally do ([check the installation guide][devise])
 - in your routes change `devise_for ModelName` with `devise_ios_rails_for ModelName` (ModelName is usually User)
@@ -97,7 +97,7 @@ Here's a few guidelines to follow:
 
 You can also read our blog post [announcing devise-iOS for simplified auth](https://netguru.co/blog/open-source-announcing-devise-ios).
 
-Copyright  2014 © [Netguru][netguru_url], released under the New BSD License
+Copyright  2014-2015 © [Netguru][netguru_url], released under the New BSD License
 
 [ios_devise]: https://github.com/netguru/devise-ios
 
