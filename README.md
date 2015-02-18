@@ -64,7 +64,11 @@ Example app
 Testing
 =======
 
-In order to run tests, first you need setup `.env` file in your project root - use `.env.sample` as a guide.
+In order to run tests, first you need setup the gem locally.
+
+* clone the repo to your machine `git clone https://github.com/netguru/devise-ios-rails.git`
+* go inside gems directory `cd devise-ios-rails` and run bundle command `bundle install`
+* now you need to setup your environment variables. You can simply just copy over `.env.sample` to `.env`. It should look more or less like this:
 
 ```
 DOMAIN_NAME='localhost:3000'
