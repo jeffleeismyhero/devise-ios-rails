@@ -1,3 +1,6 @@
+test:
+  pre:
+    - bundle exec rake db:schema:load
 deployment:
   master:
     branch: master
