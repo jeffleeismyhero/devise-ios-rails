@@ -14,4 +14,5 @@ group :test do
   gem 'factory_girl'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
