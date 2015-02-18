@@ -1,4 +1,4 @@
-Rails.application.configure do
+DeviseIosRailsExample::Application.configure do
   config.cache_classes = true
   config.eager_load = false
   config.serve_static_files  = true
