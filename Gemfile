@@ -2,12 +2,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem "rails", "4.1.8"
-gem 'devise'
-gem 'rdoc'
-gem 'simple_token_authentication'
-gem 'active_model_serializers', '0.9.0' # because of grape swagger
-
 group :test do
   gem 'sqlite3'
   gem 'factory_girl'
