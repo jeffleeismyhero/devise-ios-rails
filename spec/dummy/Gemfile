@@ -23,7 +23,6 @@ gem 'coffee-rails'
 gem 'devise-ios-rails', github: 'netguru/devise-ios-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'swagger-docs'
-gem 'pg'
 
 group :development do
   gem 'better_errors'
@@ -63,10 +62,6 @@ end
 
 group :production, :heroku do
   gem 'uglifier'
-end
-
-group :production, :staging, :heroku do
-  gem 'pg'
 end
 
 group :test do
